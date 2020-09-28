@@ -11,7 +11,7 @@ ls | grep 'missing' -v > dem.txt
 # '파일명 읽기 > 터미널 실행 > 루틴.sh (파일명)' count번씩 반복 실행
 for name in 'cat dem.txt' 
 do
-    gnome-terminal -- "./dem_routine.sh ${name}"
+    gnome-terminal -- "source dem_routine.sh ${name}"
     
     # 5번 실행마다 평균 소요시간(6h)만큼 sleep
     if[5 -eq $i]; then
